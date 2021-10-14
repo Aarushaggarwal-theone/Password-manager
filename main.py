@@ -8,10 +8,10 @@ def action():
         do_it =  input('TRY AGAIN: only enter add-pwd, get-pwd or get-url: ')
     
     if do_it.lower() == 'add-pwd':
-        return 'add passwords'
+        return 'add password'
     
     elif do_it.lower() == 'get-pwd':
-        return 'get passwords'
+        return 'get password'
     
     elif do_it.lower() == 'get-url':
         return 'get URLs'
@@ -25,12 +25,12 @@ while loop_on:
     
     function = action()
     
-    if function == 'get passwords':
+    if function == 'get password':
         url=input('enter url for which pwd is required: ')
         ans = d.get_pwd(url)
         print(ans)
         
-    elif function == 'add passwords':
+    elif function == 'add password':
         url=input('enter url: ')
         pwd=input('Enter password: ')
         
@@ -42,6 +42,14 @@ while loop_on:
         d.get_url(pwd)
     
     print('Your Function has been executed')
+     
+    ask = input('\nwould you like to continue "y" or "n": ')
+    if ask.lower() == 'y':
+        continue
+    
+    else:
+        loop_on==False
+        break
 
         
         

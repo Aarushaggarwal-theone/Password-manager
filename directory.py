@@ -29,7 +29,7 @@ def get_pwd(url):
     global directory
     for url1 in url_s:
         if url1 == url:
-            get_pwd_card = directory[url1.index()][url]
+            get_pwd_card = directory[url_s.index(url1)][url]
     
     return get_pwd_card
 
