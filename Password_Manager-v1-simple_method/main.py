@@ -1,6 +1,11 @@
 import directory as d
 
 def action():
+    """simple function made to pull action from user outside main loop
+
+    Returns:
+        function to be executed as str
+    """
     
     do_it = input('What would you like to do add-pwd, get-pwd or get-url: ')
     
