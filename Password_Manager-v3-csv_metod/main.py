@@ -4,7 +4,9 @@ import database
 url_s = []
 pwd_s = []
 
-database.get(pwd_s,url_s)
+final_list = database.get(pwd_s,url_s)
+url_s = final_list[1]
+pwd_s = final_list[0]
 
 def action():
     """simple function made to pull action from user outside main loop
@@ -38,19 +40,19 @@ while loop_on:
     
     if function == 'get password':
         url=input('enter url for which pwd is required: ')
-        ans = d.get_pwd(url)
+        ans = d.get_pwd(url, url_s, pwd_s)
         print(ans)
         
     elif function == 'add password':
         url=input('enter url: ')
         pwd=input('Enter password: ')
         
-        d.add_pwd(url, pwd)
+        d.add_pwd(url, pwd, url_s, pwd_s)
         
     else:
         pwd=input('Enter password: ')
         
-        d.get_url(pwd)
+        d.get_url(pwd, url_s, pwd_s)
     
     print('Your Function has been executed')
      

@@ -24,9 +24,9 @@ def get_pwd(url, url_s, pwd_s):
     
     for url1 in url_s:
         if url1 == url:
-            pwd_list.append(pwd_s[url_s.index(url1)])
-    
-    return pwd_list
+            pwd = pwd_s[url_s.index(url1)]
+            
+    return pwd
 
 def get_url(pwd, url_s, pwd_s):
     url_list = []
