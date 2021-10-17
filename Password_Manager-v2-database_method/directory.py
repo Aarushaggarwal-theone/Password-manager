@@ -8,7 +8,7 @@ def add_pwd(url, pwd, url_s, pwd_s):
     Returns:
         Adds a dict to the database named dictionary and adds url and pwd to the url_s and pwd_s lists respectively]65
     """
-    global directory
+    
     url_s.append(url)
     pwd_s.append(pwd)
     
@@ -21,7 +21,7 @@ def get_pwd(url, url_s, pwd_s):
     Returns:
         pwd as string
     """
-    global directory
+    
     for url1 in url_s:
         if url1 == url:
             pwd_list.append(pwd_s[url_s.index(url1)])
@@ -37,7 +37,7 @@ def get_url(pwd, url_s, pwd_s):
     Prints:
         pwd as string
     """
-    global directory
+    
     
     for pwd1 in pwd_s:
         if pwd1 == pwd:
