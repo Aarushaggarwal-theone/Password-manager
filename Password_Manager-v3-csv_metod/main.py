@@ -52,7 +52,8 @@ while loop_on:
     else:
         pwd=input('Enter password: ')
         
-        d.get_url(pwd, url_s, pwd_s)
+        ans = d.get_url(pwd, url_s, pwd_s)
+        print(ans)
     
     print('Your Function has been executed')
      
