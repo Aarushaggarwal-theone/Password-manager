@@ -21,10 +21,7 @@ def get_pwd(url, url_s, pwd_s):
     Returns:
         pwd as string
     """
-    
-    for url1 in url_s:
-        if url1 == url:
-            pwd = pwd_s[url_s.index(url1)]
+    pwd = pwd_s[url_s.index(url)]
             
     return pwd
 
