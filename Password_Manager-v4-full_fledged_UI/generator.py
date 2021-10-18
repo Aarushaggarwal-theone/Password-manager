@@ -2,7 +2,7 @@ from random import randint, shuffle, randrange
 import directory as d
 from generator_lists import low_letters, high_letters, digits, characters
 
-def generate(pwd_s, url_s):
+def generate():
     len_of_pwd = int(input('How long should the password be: '))
     u_letters = int(input("How many uppercase letters tdo you want: "))
     digit = int(input("How many digits to add to the password: "))
@@ -35,4 +35,5 @@ def generate(pwd_s, url_s):
     pwd = shuffle(password)
     
     return pwd
-        
+
+def add(pwd_s, url_s): 
