@@ -32,7 +32,7 @@ def action():
 
     elif do_it.lower() == 'get-url':
         return 'get URLs'
-    
+
     else:
         return 'gen password'
 
@@ -64,11 +64,11 @@ while loop_on:
 
         ans = d.get_url(pwd, url_s, pwd_s)
         print(ans)
-        
+
     else:
         password = generator.generate()
         print(password)
-        
+
         ask123 = input('Would you like to add the generated password: ')
         if ask123 == 'yes':
             url = input("enter url for which password was generated: ")

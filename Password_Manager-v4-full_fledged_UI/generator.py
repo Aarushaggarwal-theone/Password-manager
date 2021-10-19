@@ -3,6 +3,7 @@ import directory as d
 from generator_lists import low_letters, high_letters, digits, characters
 import string
 
+
 def generate():
     len_of_pwd = int(input('How long should the password be: '))
     u_letters = int(input("How many uppercase letters tdo you want: "))
