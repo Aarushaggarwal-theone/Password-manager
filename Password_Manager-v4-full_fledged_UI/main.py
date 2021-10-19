@@ -1,5 +1,6 @@
 import directory as d
 import database
+import generator
 
 url_s = []
 pwd_s = []
@@ -16,9 +17,11 @@ def action():
         function to be executed as str
     """
 
-    do_it = input('What would you like to do add-pwd, get-pwd or get-url: ')
+    do_it = input('''What would you like to do add-pwd, get-pwd, generate-pwd
+                  or
+                  get-url: ''')
 
-    while do_it not in ("get-url", "get-pwd", "add-pwd"):
+    while do_it not in ("get-url", "get-pwd", "add-pwd", 'generate-pwd'):
         do_it = input('TRY AGAIN: only enter add-pwd, get-pwd or get-url: ')
 
     if do_it.lower() == 'add-pwd':
@@ -29,6 +32,9 @@ def action():
 
     elif do_it.lower() == 'get-url':
         return 'get URLs'
+    
+    else:
+        return 'gen password'
 
 
 print("""Hello and Welcome to Aarush's Password Manager!\nHere you can:\n
@@ -53,12 +59,20 @@ while loop_on:
 
         d.add_pwd(url, pwd, url_s, pwd_s)
 
-    else:
+    elif function == 'get URLs':
         pwd = input('Enter password: ')
 
         ans = d.get_url(pwd, url_s, pwd_s)
         print(ans)
-
+        
+    else:
+        password = generator.generate()
+        print(password)
+        
+        ask123 = input('Would you like to add the generated password: ')
+        if ask123 == 'yes':
+            url = input("enter url for which password was generated: ")
+            d.add_pwd(url, password, url_s, pwd_s)
     print('Your Function has been executed')
 
     ask = input('\nwould you like to continue "y" or "n": ')

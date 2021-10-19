@@ -15,12 +15,7 @@ def store(url_s, pwd_s):
     for index, value in enumerate(pwd_s):
         data_dict["Passwords"][index] = str(value)
 
-    data = pandas.DataFrame.from_dict(data_dict).to_csv("""/Users/aarusha/
-                                                        Documents/Coding/
-                                                        Professional_Projects/
-                                                        Password-manager/
-                                                        Password_Manager-v3-
-                                                        csv_metod/dataf.csv""")
+    data = pandas.DataFrame.from_dict(data_dict).to_csv("""Password_Manager-v4-full_fledged_UI/dataf.csv""")
 
 
 def get(pwd_s, url_s):
@@ -31,9 +26,7 @@ def get(pwd_s, url_s):
         pwd_s (list): list containg all passwords which are saved
         url_s (list): list containg all urls fo which passwords are saved
     """
-    data1 = pandas.read_csv('''/Users/aarusha/Documents/Coding/
-                            Professional_Projects/Password-manager/
-                            Password_Manager-v3-csv_metod/dataf.csv''')
+    data1 = pandas.read_csv('''Password_Manager-v4-full_fledged_UI/dataf.csv''')
 
     pwd_s = data1['Passwords'].to_list()
     url_s = data1['URLs'].to_list()

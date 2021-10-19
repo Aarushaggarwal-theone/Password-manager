@@ -16,7 +16,6 @@ def add_pwd(url, pwd, url_s, pwd_s):
 
 
 def get_pwd(url, url_s, pwd_s):
-    pwd_list = []
     """Gets a pwd for specific url
 
     Args:
