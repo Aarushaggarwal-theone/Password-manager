@@ -1,5 +1,5 @@
-import directory as d
 import database
+import directory as d
 import generator
 
 url_s = []
