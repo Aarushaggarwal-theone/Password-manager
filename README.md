@@ -2,7 +2,7 @@
 
 ###### Basic Description of the Project:
 
-The Password Manager project is a simple UI version of a password manager/generator. I have used only Python to create this project in order to make it easier to install and run it. As of now I have not included Python package folders in the repository itself, but you can install python for macOS from and python for
+The Password Manager project is a simple UI version of a password manager/generator. I have used only Python to create this project in order to make it easier to install and run it. As of now I have not included Python package folders in the repository itself, but you can install python from python.org/downloads
 
 V1 is a simple version of the password manageer built solely for the purpose of understanding the alogrithm
 
